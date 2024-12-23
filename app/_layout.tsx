@@ -1,4 +1,3 @@
-
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
@@ -24,7 +23,7 @@ export default function RootLayout() {
   }
 
   return (
-    <View style={{flex: 1, backgroundColor: 'white'}}>
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
       <Text>Hola</Text>
     </View>
   );
