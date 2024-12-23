@@ -1,3 +1,4 @@
+import { SearchField } from '@/components/SearchField';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
@@ -23,8 +24,9 @@ export default function RootLayout() {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: 'white' }}>
+    <View style={{ flex: 1, backgroundColor: 'white', padding: 20 }}>
       <Text>Hola</Text>
+      <SearchField />
     </View>
   );
 }
