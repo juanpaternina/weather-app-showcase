@@ -1,8 +1,7 @@
-import { SearchField } from '@/components/SearchField';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { SafeAreaView, Text } from 'react-native';
 import 'react-native-reanimated';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -24,9 +23,8 @@ export default function RootLayout() {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: 'white', padding: 20 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: 'white', padding: 20 }}>
       <Text>Hola</Text>
-      <SearchField />
-    </View>
+    </SafeAreaView>
   );
 }

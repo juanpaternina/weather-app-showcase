@@ -1,37 +1,16 @@
-import { useState } from 'react';
-import { useLoadingStatus } from './useLoadingStatus';
-import { useErrorStatus } from './useErrorStatus';
 import { requestCreator } from '@/helpers/requestCreator';
-import { City } from '@/types/City';
+import { City } from '@/types/city';
 import { API_TYPES } from '@/constants/Api';
+import { useAPI } from './useAPI';
 
 export const useSearch = () => {
-  const { loading, updateLoadingState } = useLoadingStatus();
-  const { error, errorMessage, updateErrorState } = useErrorStatus();
+  const { data, error, errorMessage, loading, fetchAPI } = useAPI<City[]>();
 
-  const [data, setData] = useState<City[]>([]);
-
-  const searchCity = (queryString: string): City[] => {
-    updateLoadingState(true);
-
-    fetch(
-      requestCreator(API_TYPES.SEARCH, {
-        q: queryString,
-      }),
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-      })
-      .catch(() => {
-        updateErrorState(true, "Couldn't fetch data, please try again later");
-        setData([]);
-      })
-      .finally(() => {
-        updateLoadingState(false);
-      });
-    return data;
+  const searchCity = (queryString: string) => {
+    const requestURL = requestCreator(API_TYPES.SEARCH, {
+      q: queryString,
+    });
+    fetchAPI(requestURL);
   };
 
   return {
@@ -39,7 +18,6 @@ export const useSearch = () => {
     error,
     errorMessage,
     loading,
-    updateLoadingState,
     searchCity,
   };
 };

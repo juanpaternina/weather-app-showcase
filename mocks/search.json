@@ -1,0 +1,47 @@
+[
+    {
+    "id": 714482,
+    "name": "Madrid",
+    "region": "Madrid",
+    "country": "Spain",
+    "lat": 40.4,
+    "lon": -3.68,
+    "url": "madrid-madrid-spain"
+    },
+    {
+    "id": 517469,
+    "name": "Madrid",
+    "region": "Cundinamarca",
+    "country": "Colombia",
+    "lat": 4.45,
+    "lon": -74.16,
+    "url": "madrid-cundinamarca-colombia"
+    },
+    {
+    "id": 714481,
+    "name": "Madridejos",
+    "region": "Castilla-La Mancha",
+    "country": "Spain",
+    "lat": 39.47,
+    "lon": -3.53,
+    "url": "madridejos-castilla-la-mancha-spain"
+    },
+    {
+    "id": 3325190,
+    "name": "Madrid",
+    "region": "Colima",
+    "country": "Mexico",
+    "lat": 19.08,
+    "lon": -103.87,
+    "url": "madrid-colima-mexico"
+    },
+    {
+    "id": 1850841,
+    "name": "Madridejos",
+    "region": "Cebu",
+    "country": "Philippines",
+    "lat": 11.3,
+    "lon": 123.73,
+    "url": "madridejos-cebu-philippines"
+    }
+]
