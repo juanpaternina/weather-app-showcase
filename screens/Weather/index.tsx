@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 
@@ -11,6 +11,7 @@ import { ForecastDay } from '@/components/ForecastDay';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/state/store';
 import { useFetchWeather } from '@/hooks/useFetchWeather';
+import { useLocation } from '@/hooks/useLocation';
 
 import moment from 'moment';
 
@@ -19,19 +20,32 @@ const ForecastContainer = styled.View`
 `;
 
 export const Weather = () => {
+  //Effects
+  const [initialSetup, setInitialSetup] = useState(false);
+
   //Hooks
   const { error, loading, fetchWeather, data } = useFetchWeather();
+  const { getLocation } = useLocation();
 
   // Selectors
   const userLocation = useSelector(
     (state: RootState) => state.weather.location,
   );
 
+  // Memoize the date
   const date = useMemo(() => moment().format('dddd, D MMMM '), []);
 
+  // Effects
   useEffect(() => {
     fetchWeather(userLocation.lat, userLocation.lng);
   }, [fetchWeather, userLocation.lat, userLocation.lng]);
+
+  useEffect(() => {
+    if (initialSetup) return;
+
+    getLocation();
+    setInitialSetup(true);
+  }, [getLocation, initialSetup]);
 
   if (error || !data) {
     return <></>;
