@@ -5,6 +5,8 @@ import { useSearch } from '@/hooks/useSearch';
 import useDebounce from '@/hooks/useDebounce';
 import styled from 'styled-components/native';
 
+import { CityList } from '@/components/CityList';
+
 const SearchFieldContainer = styled.View`
   border-width: 1px;
   border-color: black;
@@ -13,7 +15,7 @@ const SearchFieldContainer = styled.View`
 
 export const SearchField = () => {
   const [searchText, setSearchText] = useState('');
-  const { searchCity, loading } = useSearch();
+  const { data, searchCity, loading } = useSearch();
 
   const debouncedSearch = useDebounce((queryString: string) => {
     searchCity(queryString);
@@ -25,15 +27,17 @@ export const SearchField = () => {
   };
 
   return (
-    <SearchFieldContainer>
-      <TextInput
-        value={searchText}
-        placeholder="Search city"
-        onChangeText={handleSearchCity}
-        placeholderTextColor={'gray'}
-        style={{ borderWidth: 1, borderColor: 'black', padding: 10 }}
-      />
+    <>
+      <SearchFieldContainer>
+        <TextInput
+          value={searchText}
+          placeholder="Search city"
+          onChangeText={handleSearchCity}
+          placeholderTextColor={'gray'}
+        />
+      </SearchFieldContainer>
       {loading && <Text>Loading...</Text>}
-    </SearchFieldContainer>
+      <CityList cities={data} />
+    </>
   );
 };
