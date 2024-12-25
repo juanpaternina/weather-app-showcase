@@ -1,8 +1,9 @@
+import { useMemo } from 'react';
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { Subtitle } from '@/components/Core/Subtitle';
 import { Forecastday } from '@/types/api/weather';
-import { useMemo } from 'react';
+
 import { forecastFormat } from '@/helpers/forcastFormater';
 
 const ForecastDayWrapper = styled.View`

@@ -1,12 +1,10 @@
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-
+import { SafeAreaView, StyleSheet } from 'react-native';
 import 'react-native-reanimated';
 
-import { Provider } from 'react-redux';
-import { store } from '@/state/store';
-import { Weather } from '@/screens/Weather';
+import { Stack } from 'expo-router';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -30,9 +28,5 @@ export default function RootLayout() {
     return null;
   }
 
-  return (
-    <Provider store={store}>
-      <Weather />
-    </Provider>
-  );
+  return <Stack screenOptions={{ headerShown: false }} />;
 }

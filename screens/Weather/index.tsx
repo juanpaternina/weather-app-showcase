@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 
-import { City } from '@/components/City';
+import { Header } from '@/components/Header';
 import { Date } from '@/components/Date';
 import { Degrees } from '@/components/Degrees';
 import { Condition } from '@/components/Condition';
@@ -57,9 +57,10 @@ export const Weather = () => {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#42C6FF', padding: 0 }}>
-      <City style={styles.city}>
-        {data.location.name}, {data.location.country}
-      </City>
+      <Header
+        cityName={data.location.name}
+        countryName={data.location.country}
+      />
       <Date style={styles.date}>{date}</Date>
       <Condition
         condition={data.current.condition.text}
@@ -80,9 +81,6 @@ export const Weather = () => {
 };
 
 const styles = StyleSheet.create({
-  city: {
-    marginBottom: 4,
-  },
   date: {
     marginBottom: 14,
   },
