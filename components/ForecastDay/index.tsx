@@ -1,34 +1,9 @@
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { Subtitle } from '@/components/Core/Subtitle';
-
-const sampleData = [
-  {
-    degree: 10,
-    conditionIcon: 'https://cdn.weatherapi.com/weather/64x64/day/122.png',
-    date: '21 Jan',
-  },
-  {
-    degree: 14,
-    conditionIcon: 'https://cdn.weatherapi.com/weather/64x64/day/122.png',
-    date: '22 Jan',
-  },
-  {
-    degree: 22,
-    conditionIcon: 'https://cdn.weatherapi.com/weather/64x64/day/122.png',
-    date: '23 Jan',
-  },
-  {
-    degree: 8,
-    conditionIcon: 'https://cdn.weatherapi.com/weather/64x64/day/122.png',
-    date: '24 Jan',
-  },
-  {
-    degree: 12,
-    conditionIcon: 'https://cdn.weatherapi.com/weather/64x64/day/122.png',
-    date: '25 Jan',
-  },
-];
+import { Forecastday } from '@/types/api/weather';
+import { useMemo } from 'react';
+import { forecastFormat } from '@/helpers/forcastFormater';
 
 const ForecastDayWrapper = styled.View`
   padding-left: 30px;
@@ -66,15 +41,22 @@ const ForeCastDayItem = ({ item }: { item: any }) => {
   );
 };
 
-export const ForecastDay = () => {
+interface ForecastDayProps {
+  days: Forecastday[];
+}
+
+export const ForecastDay = (props: ForecastDayProps) => {
+  const data = useMemo(() => forecastFormat(props.days), [props.days]);
+
   return (
     <ForecastDayWrapper>
-      <Subtitle style={{ marginBottom: 10, fontFamily: 'bold' }}>
+      <Subtitle style={{ marginBottom: 14, fontFamily: 'bold' }}>
         Weekly forecast
       </Subtitle>
       <FlatList
+        showsHorizontalScrollIndicator={false}
         horizontal={true}
-        data={sampleData}
+        data={data}
         renderItem={({ item }) => <ForeCastDayItem item={item} />}
       />
     </ForecastDayWrapper>

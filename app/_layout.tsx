@@ -1,15 +1,12 @@
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+
 import 'react-native-reanimated';
 
-import { City } from '@/components/City';
-import { Date } from '@/components/Date';
-import { Degrees } from '@/components/Degrees';
-import { Condition } from '@/components/Condition';
-import { Summary } from '@/components/Summary';
-import { ForecastDay } from '@/components/ForecastDay';
+import { Provider } from 'react-redux';
+import { store } from '@/state/store';
+import { Weather } from '@/screens/Weather';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -34,26 +31,8 @@ export default function RootLayout() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'white', padding: 20 }}>
-      <City style={stlyes.city}>Paris, France</City>
-      <Date style={stlyes.date}>Friday, 20 January </Date>
-      <Condition
-        condition="Partly cloud"
-        conditionImage="//cdn.weatherapi.com/weather/64x64/day/122.png"
-      />
-      <Degrees degrees={34} />
-      <Summary summary="It feel like 5 degrees hotter than actual temperature." />
-      <ForecastDay />
-    </SafeAreaView>
+    <Provider store={store}>
+      <Weather />
+    </Provider>
   );
 }
-
-const stlyes = StyleSheet.create({
-  city: {
-    marginTop: 30,
-    marginBottom: 4,
-  },
-  date: {
-    marginBottom: 24,
-  },
-});

@@ -5,9 +5,10 @@ export const Date = styled(Paragraph)`
   background-color: black;
   color: white;
   text-align: center;
-  border-radius: 16px;
-  padding: 5px;
+  border-radius: 32px;
+  padding-horizontal: 14px;
+  padding-vertical: 5px;
   font-family: medium;
-  width: 200px;
+  min-width: 200px;
   align-self: center;
 `;

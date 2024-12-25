@@ -1,0 +1,22 @@
+[
+  {
+    "degree": 10,
+    "conditionIcon": "https://cdn.weatherapi.com/weather/64x64/day/122.png",
+    "date": "21 Jan"
+  },
+  {
+    "degree": 7,
+    "conditionIcon": "https://cdn.weatherapi.com/weather/64x64/day/122.png",
+    "date": "22 Jan"
+  },
+  {
+    "degree": 4,
+    "conditionIcon": "https://cdn.weatherapi.com/weather/64x64/day/122.png",
+    "date": "23 Jan"
+  },
+  {
+    "degree": 5,
+    "conditionIcon": "https://cdn.weatherapi.com/weather/64x64/day/122.png",
+    "date": "24 Jan"
+  }
+]

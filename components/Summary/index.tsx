@@ -45,7 +45,7 @@ const SummaryCard = (props: {
     >
       <SummaryItem
         type="Wind"
-        value={`${props.wind} mph`}
+        value={`${props.wind} kph`}
         icon={<MaterialIcons name="wind-power" size={32} color="white" />}
       />
       <SummaryItem
@@ -62,14 +62,30 @@ const SummaryCard = (props: {
   );
 };
 
-export const Summary = ({ summary }: { summary: string }) => {
+interface SummaryProps {
+  summary: string;
+  windSpeed: number;
+  humidity: number;
+  visibility: number;
+}
+
+export const Summary = ({
+  summary,
+  windSpeed,
+  humidity,
+  visibility,
+}: SummaryProps) => {
   return (
     <SummaryWrapper>
-      <Subtitle style={{ marginBottom: 10, fontFamily: 'bold' }}>
+      <Subtitle style={{ marginBottom: 14, fontFamily: 'bold' }}>
         Daily Summary
       </Subtitle>
       <Paragraph style={{ marginBottom: 20 }}>{summary}</Paragraph>
-      <SummaryCard wind={10} humidity={50} visibility={10} />
+      <SummaryCard
+        wind={windSpeed}
+        humidity={humidity}
+        visibility={visibility}
+      />
     </SummaryWrapper>
   );
 };
