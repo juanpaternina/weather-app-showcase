@@ -10,7 +10,9 @@ import { CityList } from '@/components/CityList';
 const SearchFieldContainer = styled.View`
   border-width: 1px;
   border-color: black;
-  padding: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 10px;
 `;
 
 export const SearchField = () => {

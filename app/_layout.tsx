@@ -5,6 +5,8 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 import 'react-native-reanimated';
 
 import { Stack } from 'expo-router';
+import { store } from '@/state/store';
+import { Provider } from 'react-redux';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -28,5 +30,9 @@ export default function RootLayout() {
     return null;
   }
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <Provider store={store}>
+      <Stack screenOptions={{ headerShown: false }} />
+    </Provider>
+  );
 }
