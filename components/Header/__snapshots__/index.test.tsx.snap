@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header It should render Header component 1`] = `
+<View>
+  <Text
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "borderBottomLeftRadius": 16,
+          "borderBottomRightRadius": 16,
+          "borderTopLeftRadius": 16,
+          "borderTopRightRadius": 16,
+          "color": "black",
+          "fontFamily": "bold",
+          "fontSize": 22,
+          "fontWeight": "bold",
+          "textAlign": "center",
+          "width": 250,
+        },
+        {
+          "marginBottom": 4,
+        },
+      ]
+    }
+  >
+    London
+    , 
+    UK
+  </Text>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "position": "absolute",
+        "right": 20,
+        "top": 0,
+      }
+    }
+    testID="material-icon-search"
+  >
+    <mock-icon
+      color="black"
+      data-testid="material-icon-search"
+      size={32}
+    />
+  </View>
+</View>
+`;

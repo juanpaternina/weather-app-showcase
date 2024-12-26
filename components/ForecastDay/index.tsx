@@ -2,10 +2,9 @@ import { useMemo } from 'react';
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { Subtitle } from '@/components/Core/Subtitle';
-import { Forecast, Forecastday, Time } from '@/types/api/weather';
+import { Forecastday } from '@/types/api/weather';
 
 import { forecastFormat } from '@/helpers/forcastFormater';
-import { Weather } from '@/types/weather';
 import { FormattedForcast } from '@/types/forecast';
 
 interface ForecastDayProps {

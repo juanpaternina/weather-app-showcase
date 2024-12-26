@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 import * as Location from 'expo-location';
 
-import { useAppDispatch } from '@/state/store';
 import { updateUserLocation } from '@/state/slices/weather';
+import { useAppDispatch } from '@/state/hooks';
 
 export const useLocation = () => {
   const dispatch = useAppDispatch();

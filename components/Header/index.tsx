@@ -26,7 +26,7 @@ export const Header = (props: HeaderProps) => {
         {props.cityName}, {props.countryName}
       </City>
 
-      <SearchContainer>
+      <SearchContainer testID="material-icon-search">
         <Link href="/search" asChild>
           <MaterialIcons name="search" size={32} color="black" />
         </Link>

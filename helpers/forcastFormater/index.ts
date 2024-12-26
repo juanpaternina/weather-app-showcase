@@ -1,4 +1,4 @@
-import { Forecastday, Time } from '@/types/api/weather';
+import { Forecastday } from '@/types/api/weather';
 import { FormattedForcast } from '@/types/forecast';
 
 import moment from 'moment-timezone';

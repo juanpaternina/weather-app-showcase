@@ -8,6 +8,13 @@ import { Subtitle } from '@/components/Core/Subtitle';
 import { Card } from '@/components/Core/Card';
 import { View } from 'react-native';
 
+interface SummaryProps {
+  summary: string;
+  windSpeed: number;
+  humidity: number;
+  visibility: number;
+}
+
 const SummaryWrapper = styled.View`
   padding-left: 30px;
   padding-right: 30px;
@@ -61,13 +68,6 @@ const SummaryCard = (props: {
     </Card>
   );
 };
-
-interface SummaryProps {
-  summary: string;
-  windSpeed: number;
-  humidity: number;
-  visibility: number;
-}
 
 export const Summary = ({
   summary,

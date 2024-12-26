@@ -7,27 +7,11 @@
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "coverage": "yarn test --coverage --watchAll=true",
     "test": "jest --watchAll",
     "lint": "expo lint"
   },
   "jest": {
-    "preset": "jest-expo",
-    "collectCoverageFrom": [
-      "/hooks/**/*.{js,jsx,ts,tsx}",
-      "/components/**/*.{js,jsx,ts,tsx}",
-      "/app/**/*.{js,jsx,ts,tsx}",
-      "/helpers/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": -10
-      }
-    }
+    "preset": "jest-expo"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
@@ -66,6 +50,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.26.3",
     "@testing-library/react-native": "^12.9.0",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.3.12",

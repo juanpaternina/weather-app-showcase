@@ -2,14 +2,14 @@ import React from 'react';
 
 import { FlatList } from 'react-native';
 import { City } from '@/types/city';
-import { useDispatch } from 'react-redux';
 import { updateUserLocation } from '@/state/slices/weather';
-import { AppDispatch } from '@/state/store';
+
 import { useRouter } from 'expo-router';
 import styled from 'styled-components/native';
 
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { shuffleTheme } from '@/state/slices/theme';
+import { useAppDispatch } from '@/state/hooks';
 
 interface CityListProps {
   cities: City[] | null;
@@ -41,12 +41,11 @@ const CityName = styled.Text`
 `;
 
 const CityItem = (item: CityItemProps) => {
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatcher = useAppDispatch();
   const router = useRouter();
-  const dispatcher = useDispatch<AppDispatch>();
 
   const handlePress = (city: City) => {
-    dispatch(updateUserLocation({ lat: city.lat, lng: city.lon }));
+    dispatcher(updateUserLocation({ lat: city.lat, lng: city.lon }));
     dispatcher(shuffleTheme());
     router.back();
   };
