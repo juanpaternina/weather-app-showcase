@@ -6,9 +6,13 @@ import { Forecastday } from '@/types/api/weather';
 
 import { forecastFormat } from '@/helpers/forcastFormater';
 
+interface ForecastDayProps {
+  days: Forecastday[];
+}
+
 const ForecastDayWrapper = styled.View`
-  padding-left: 30px;
-  padding-right: 30px;
+  /* padding-left: 30px; */
+  /* padding-right: 30px; */
   margin-top: 10px;
   margin-bottom: 10px;
 `;
@@ -42,19 +46,18 @@ const ForeCastDayItem = ({ item }: { item: any }) => {
   );
 };
 
-interface ForecastDayProps {
-  days: Forecastday[];
-}
-
 export const ForecastDay = (props: ForecastDayProps) => {
   const data = useMemo(() => forecastFormat(props.days), [props.days]);
 
   return (
     <ForecastDayWrapper>
-      <Subtitle style={{ marginBottom: 14, fontFamily: 'bold' }}>
+      <Subtitle
+        style={{ marginBottom: 14, fontFamily: 'bold', paddingLeft: 30 }}
+      >
         Weekly forecast
       </Subtitle>
       <FlatList
+        style={{ paddingStart: 30 }}
         showsHorizontalScrollIndicator={false}
         horizontal={true}
         data={data}

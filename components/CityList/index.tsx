@@ -9,6 +9,7 @@ import { useRouter } from 'expo-router';
 import styled from 'styled-components/native';
 
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { shuffleTheme } from '@/state/slices/theme';
 
 interface CityListProps {
   cities: City[] | null;
@@ -42,10 +43,11 @@ const CityName = styled.Text`
 const CityItem = (item: CityItemProps) => {
   const dispatch = useDispatch<AppDispatch>();
   const router = useRouter();
+  const dispatcher = useDispatch<AppDispatch>();
 
   const handlePress = (city: City) => {
     dispatch(updateUserLocation({ lat: city.lat, lng: city.lon }));
-    // TODO: Shuffle colors
+    dispatcher(shuffleTheme());
     router.back();
   };
 
