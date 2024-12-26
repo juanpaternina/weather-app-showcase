@@ -78,7 +78,10 @@ export default function App() {
         summary={`It feels like ${data.current.feelslike_c} degrees`}
       />
       <ForecastContainer>
-        <ForecastDay days={data.forecast.forecastday} />
+        <ForecastDay
+          days={data.forecast.forecastday}
+          timeZone={data.location.tz_id}
+        />
       </ForecastContainer>
     </SafeAreaView>
   );

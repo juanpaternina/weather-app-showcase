@@ -16,4 +16,10 @@ export interface Forecastday {
   date: string;
   date_epoch: number;
   day: Day;
+  hour: [Weather & Time];
+}
+
+export interface Time {
+  time_epoch: number;
+  time: string;
 }

@@ -11,7 +11,7 @@ export const useFetchWeather = () => {
     (lat: number, long: number) => {
       const requestURL = requestCreator(API_TYPES.FORECAST, {
         q: `${lat},${long}`,
-        days: 6,
+        days: 2,
       });
       fetchAPI(requestURL);
     },

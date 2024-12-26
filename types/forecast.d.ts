@@ -1,5 +1,5 @@
-export interface Forecast {
+export interface FormattedForcast {
   degree: number;
   conditionIcon: string;
-  date: string;
+  hour: string;
 }

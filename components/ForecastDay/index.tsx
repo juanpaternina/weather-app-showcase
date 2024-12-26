@@ -2,12 +2,15 @@ import { useMemo } from 'react';
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { Subtitle } from '@/components/Core/Subtitle';
-import { Forecastday } from '@/types/api/weather';
+import { Forecast, Forecastday, Time } from '@/types/api/weather';
 
 import { forecastFormat } from '@/helpers/forcastFormater';
+import { Weather } from '@/types/weather';
+import { FormattedForcast } from '@/types/forecast';
 
 interface ForecastDayProps {
   days: Forecastday[];
+  timeZone: string;
 }
 
 const ForecastDayWrapper = styled.View`
@@ -23,6 +26,7 @@ const ForeCastDayItemWrapper = styled.View`
   border-radius: 8px;
   margin-right: 12px;
   padding: 10px;
+  min-width: 80px;
 `;
 
 const ConditionIcon = styled.Image`
@@ -30,7 +34,7 @@ const ConditionIcon = styled.Image`
   height: 30px;
 `;
 
-const ForeCastDayItem = ({ item }: { item: any }) => {
+const ForeCastDayItem = ({ item }: { item: FormattedForcast }) => {
   return (
     <ForeCastDayItemWrapper>
       <Subtitle style={{ fontSize: 16, fontFamily: 'bold' }}>
@@ -38,21 +42,24 @@ const ForeCastDayItem = ({ item }: { item: any }) => {
       </Subtitle>
       <ConditionIcon source={{ uri: item.conditionIcon }} />
       <Subtitle style={{ fontSize: 14, fontFamily: 'bold' }}>
-        {item.date}
+        {item.hour}
       </Subtitle>
     </ForeCastDayItemWrapper>
   );
 };
 
 export const ForecastDay = (props: ForecastDayProps) => {
-  const data = useMemo(() => forecastFormat(props.days), [props.days]);
+  const data = useMemo(
+    () => forecastFormat(props.days, props.timeZone),
+    [props.days, props.timeZone],
+  );
 
   return (
     <ForecastDayWrapper>
       <Subtitle
         style={{ marginBottom: 14, fontFamily: 'bold', paddingLeft: 30 }}
       >
-        Weekly forecast
+        Next hours forecast
       </Subtitle>
       <FlatList
         style={{ paddingStart: 30 }}
