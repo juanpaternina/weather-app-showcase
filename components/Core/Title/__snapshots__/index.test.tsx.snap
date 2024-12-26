@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title It should render a Text component 1`] = `
+<Text
+  style={
+    {
+      "color": "black",
+      "fontFamily": "bold",
+      "fontSize": 24,
+      "fontWeight": "bold",
+    }
+  }
+>
+  Title
+</Text>
+`;

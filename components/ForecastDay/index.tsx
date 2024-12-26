@@ -11,8 +11,6 @@ interface ForecastDayProps {
 }
 
 const ForecastDayWrapper = styled.View`
-  /* padding-left: 30px; */
-  /* padding-right: 30px; */
   margin-top: 10px;
   margin-bottom: 10px;
 `;

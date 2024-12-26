@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph It should render a Text component 1`] = `
+<Text
+  style={
+    {
+      "color": "black",
+      "fontFamily": "regular",
+      "fontSize": 16,
+      "fontWeight": "normal",
+    }
+  }
+>
+  Paragraph
+</Text>
+`;

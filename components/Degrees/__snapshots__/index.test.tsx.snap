@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Degrees It should render a Text component 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "flexDirection": "row",
+      "paddingBottom": 10,
+      "paddingLeft": 10,
+      "paddingRight": 10,
+      "paddingTop": 10,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "black",
+          "fontFamily": "bold",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        },
+        {
+          "fontSize": 150,
+        },
+      ]
+    }
+  >
+    10
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "color": "black",
+          "fontFamily": "medium",
+          "fontSize": 20,
+          "fontWeight": "bold",
+        },
+        {
+          "fontSize": 120,
+          "marginTop": -50,
+        },
+      ]
+    }
+  >
+    °
+  </Text>
+</View>
+`;

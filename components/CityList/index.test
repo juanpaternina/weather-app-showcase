@@ -1,0 +1,11 @@
+// import { render } from '@testing-library/react-native';
+// import { CityList } from './index';
+
+// import cities from '@/mocks/search.json';
+
+// describe('CityList Component', () => {
+//   test('renders correctly with given text', () => {
+//     const { toJSON } = render(<CityList cities={cities} />);
+//     expect(toJSON()).toMatchSnapshot();
+//   });
+// });

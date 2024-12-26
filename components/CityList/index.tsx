@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FlatList, Text } from 'react-native';
+import { FlatList } from 'react-native';
 import { City } from '@/types/city';
 import { useDispatch } from 'react-redux';
 import { updateUserLocation } from '@/state/slices/weather';

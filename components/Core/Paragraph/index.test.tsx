@@ -4,7 +4,8 @@ const { Paragraph } = require('.');
 
 describe('Paragraph', () => {
   test('It should render a Text component', () => {
-    render(<Paragraph>Paragraph</Paragraph>);
+    const { toJSON } = render(<Paragraph>Paragraph</Paragraph>);
+    expect(toJSON()).toMatchSnapshot();
     const text = screen.getByText('Paragraph');
     expect(text).toBeDefined();
   });

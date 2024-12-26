@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card It should render a View component 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "black",
+      "borderBottomLeftRadius": 10,
+      "borderBottomRightRadius": 10,
+      "borderTopLeftRadius": 10,
+      "borderTopRightRadius": 10,
+      "minHeight": 10,
+    }
+  }
+/>
+`;

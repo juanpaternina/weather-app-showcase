@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Subtitle It should render a Text component 1`] = `
+<Text
+  style={
+    {
+      "color": "black",
+      "fontFamily": "medium",
+      "fontSize": 20,
+      "fontWeight": "bold",
+    }
+  }
+>
+  Subtitle
+</Text>
+`;

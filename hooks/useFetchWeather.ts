@@ -9,7 +9,6 @@ export const useFetchWeather = () => {
 
   const fetchWeather = useCallback(
     (lat: number, long: number) => {
-      console.log('Fetch called with ', lat, long);
       const requestURL = requestCreator(API_TYPES.FORECAST, {
         q: `${lat},${long}`,
         days: 6,

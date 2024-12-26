@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`City Component Snapshot 1`] = `
+<Text
+  style={
+    {
+      "alignSelf": "center",
+      "borderBottomLeftRadius": 16,
+      "borderBottomRightRadius": 16,
+      "borderTopLeftRadius": 16,
+      "borderTopRightRadius": 16,
+      "color": "black",
+      "fontFamily": "bold",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "textAlign": "center",
+      "width": 250,
+    }
+  }
+>
+  Test City
+</Text>
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Date It should render a Text component 1`] = `
+<Text
+  style={
+    {
+      "alignSelf": "center",
+      "backgroundColor": "black",
+      "borderBottomLeftRadius": 32,
+      "borderBottomRightRadius": 32,
+      "borderTopLeftRadius": 32,
+      "borderTopRightRadius": 32,
+      "color": "white",
+      "fontFamily": "medium",
+      "fontSize": 16,
+      "fontWeight": "normal",
+      "minWidth": 200,
+      "paddingHorizontal": 14,
+      "paddingVertical": 5,
+      "textAlign": "center",
+    }
+  }
+>
+  Date
+</Text>
+`;

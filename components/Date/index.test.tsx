@@ -1,12 +1,13 @@
 import { render, screen } from '@testing-library/react-native';
 
-const { Title } = require('.');
+const { Date } = require('.');
 
-describe('Title', () => {
+describe('Date', () => {
   test('It should render a Text component', () => {
-    const { toJSON } = render(<Title>Title</Title>);
+    const { toJSON } = render(<Date>Date</Date>);
     expect(toJSON()).toMatchSnapshot();
-    const text = screen.getByText('Title');
+
+    const text = screen.getByText('Date');
     expect(text).toBeDefined();
   });
 });
