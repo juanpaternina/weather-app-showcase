@@ -2,10 +2,10 @@ import { useMemo } from 'react';
 import styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { Subtitle } from '@/components/Core/Subtitle';
-import { Forecastday } from '@/types/api/weather';
 
 import { forecastFormat } from '@/helpers/forcastFormater';
 import { FormattedForcast } from '@/types/forecast';
+import { Forecastday } from '@/types/api/weather';
 
 interface ForecastDayProps {
   days: Forecastday[];
@@ -35,7 +35,7 @@ const ConditionIcon = styled.Image`
 
 const ForeCastDayItem = ({ item }: { item: FormattedForcast }) => {
   return (
-    <ForeCastDayItemWrapper>
+    <ForeCastDayItemWrapper testID="forecast-item">
       <Subtitle style={{ fontSize: 16, fontFamily: 'bold' }}>
         {item.degree}°
       </Subtitle>

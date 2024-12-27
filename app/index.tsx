@@ -8,12 +8,13 @@ import { Degrees } from '@/components/Degrees';
 import { Condition } from '@/components/Condition';
 import { Summary } from '@/components/Summary';
 import { ForecastDay } from '@/components/ForecastDay';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/state/hooks';
 import { RootState } from '@/state/store';
 import { useFetchWeather } from '@/hooks/useFetchWeather';
 import { useLocation } from '@/hooks/useLocation';
 
 import moment from 'moment';
+import { Subtitle } from '@/components/Core/Subtitle';
 
 const ForecastContainer = styled.View`
   margin-top: 4px;
@@ -24,15 +25,15 @@ export default function App() {
   const [initialSetup, setInitialSetup] = useState(false);
 
   //Hooks
-  const { error, loading, fetchWeather, data } = useFetchWeather();
+  const { error, errorMessage, fetchWeather, data } = useFetchWeather();
   const { getLocation } = useLocation();
 
   // Selectors
-  const userLocation = useSelector(
+  const userLocation = useAppSelector(
     (state: RootState) => state.weather.location,
   );
 
-  const { color } = useSelector((state: RootState) => state.theme);
+  const { color } = useAppSelector((state: RootState) => state.theme);
 
   // Memoize the date
   const date = useMemo(() => moment().format('dddd, D MMMM '), []);
@@ -50,14 +51,8 @@ export default function App() {
   }, [getLocation, initialSetup]);
 
   if (error || !data) {
-    return <></>;
+    return <Subtitle>{errorMessage}</Subtitle>;
   }
-
-  if (!data || loading) {
-    return <></>;
-  }
-
-  //#42C6FF
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: color, padding: 0 }}>

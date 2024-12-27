@@ -6,21 +6,17 @@ export const useErrorStatus = () => {
 
   const updateErrorState = useCallback(
     (isError: boolean, lErrorMessage?: string) => {
-      if (isError && errorMessage) {
-        setErrorMessage(errorMessage);
-        setError(isError);
-        return;
+      if (isError) {
+        setError(true);
+        setErrorMessage(
+          lErrorMessage || errorMessage || 'Something went wrong',
+        );
+      } else {
+        setError(false);
+        setErrorMessage('');
       }
-
-      if (isError && !lErrorMessage) {
-        setErrorMessage('Something went wrong');
-        return;
-      }
-
-      setError(isError);
-      setErrorMessage('');
     },
-    [],
+    [errorMessage],
   );
 
   return { error, errorMessage, updateErrorState };

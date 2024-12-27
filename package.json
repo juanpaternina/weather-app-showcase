@@ -7,8 +7,9 @@
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "test": "jest --watch --coverage=false",
+    "test": "jest --watchAll=true --coverage=false",
     "coverage": "jest --coverage",
+    "coverage-watch": "jest --coverage --watchAll=true",
     "lint": "expo lint"
   },
   "jest": {
@@ -20,10 +21,11 @@
     ],
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "**/hooks/*.{ts,tsx,js,jsx}",
-      "**/helpers/*.{ts,tsx,js,jsx}",
-      "**/components/*.{ts,tsx,js,jsx}",
-      "**/app/*.{ts,tsx,js,jsx}"
+      "**/app/**/*.{ts,tsx,js,jsx}",
+      "**/components/**/*.{ts,tsx,js,jsx}",
+      "**/hooks/**/*.{ts,tsx,js,jsx}",
+      "**/helpers/**/*.{ts,tsx,js,jsx}",
+      "!**/app/+not-found.tsx" 
     ]
   },
   "dependencies": {

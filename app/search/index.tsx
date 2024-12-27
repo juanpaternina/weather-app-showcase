@@ -1,9 +1,9 @@
 import React from 'react';
 import { SearchField } from '@/components/SearchField';
-import { Pressable, SafeAreaView } from 'react-native';
+import { Pressable } from 'react-native';
 
 import styled from 'styled-components/native';
-import { Link, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 const SearchWrapper = styled.View`
@@ -28,7 +28,7 @@ export default function Search() {
   return (
     <SafeAreaViewWrapper>
       <SearchWrapper>
-        <BackButton onPress={() => router.back()}>
+        <BackButton onPress={() => router.back()} testID="back-button">
           <MaterialIcons name="arrow-back" size={32} color="black" />
         </BackButton>
         <SearchField />
