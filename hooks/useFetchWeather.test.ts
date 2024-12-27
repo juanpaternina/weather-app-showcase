@@ -5,6 +5,12 @@ import { useFetchWeather } from './useFetchWeather';
 import data from '@/mocks/weather.json';
 import { WeatherAPI } from '@/types/api/weather';
 
+import { getAPIKey } from '@/helpers/config';
+
+jest.mock('@/helpers/config', () => ({
+  getAPIKey: () => 'mocked_api_key',
+}));
+
 jest.mock('@/hooks/useAPI', () => ({
   useAPI: jest.fn(), // mock the useSearch hook
 }));

@@ -51,7 +51,10 @@ const CityItem = (item: CityItemProps) => {
   };
 
   return (
-    <PressableCity onPress={() => handlePress(item.item)}>
+    <PressableCity
+      testID="pressable-arrow-forward"
+      onPress={() => handlePress(item.item)}
+    >
       <CityName>
         {item.item.name}, {item.item.region}, {item.item.country}
       </CityName>

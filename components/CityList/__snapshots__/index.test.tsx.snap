@@ -1,0 +1,458 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CityList Component renders correctly with given text 1`] = `
+<RCTScrollView
+  data={
+    [
+      {
+        "country": "Spain",
+        "id": 714482,
+        "lat": 40.4,
+        "lon": -3.68,
+        "name": "Madrid",
+        "region": "Madrid",
+        "url": "madrid-madrid-spain",
+      },
+      {
+        "country": "Colombia",
+        "id": 517469,
+        "lat": 4.45,
+        "lon": -74.16,
+        "name": "Madrid",
+        "region": "Cundinamarca",
+        "url": "madrid-cundinamarca-colombia",
+      },
+      {
+        "country": "Spain",
+        "id": 714481,
+        "lat": 39.47,
+        "lon": -3.53,
+        "name": "Madridejos",
+        "region": "Castilla-La Mancha",
+        "url": "madridejos-castilla-la-mancha-spain",
+      },
+      {
+        "country": "Mexico",
+        "id": 3325190,
+        "lat": 19.08,
+        "lon": -103.87,
+        "name": "Madrid",
+        "region": "Colima",
+        "url": "madrid-colima-mexico",
+      },
+      {
+        "country": "Philippines",
+        "id": 1850841,
+        "lat": 11.3,
+        "lon": 123.73,
+        "name": "Madridejos",
+        "region": "Cebu",
+        "url": "madridejos-cebu-philippines",
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={0.0001}
+  stickyHeaderIndices={[]}
+  viewabilityConfigCallbackPairs={[]}
+>
+  <View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignContent": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "black",
+            "flexDirection": "row",
+            "height": 50,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "paddingTop": 15,
+            "verticalAlign": "center",
+          }
+        }
+        testID="pressable-arrow-forward"
+      >
+        <Text
+          style={
+            {
+              "alignItems": "center",
+              "color": "black",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontSize": 16,
+              "justifyContent": "center",
+              "wordWrap": "break-word",
+            }
+          }
+        >
+          Madrid
+          , 
+          Madrid
+          , 
+          Spain
+        </Text>
+        <mock-icon
+          color="black"
+          data-testid="material-icon-arrow-forward"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignContent": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "black",
+            "flexDirection": "row",
+            "height": 50,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "paddingTop": 15,
+            "verticalAlign": "center",
+          }
+        }
+        testID="pressable-arrow-forward"
+      >
+        <Text
+          style={
+            {
+              "alignItems": "center",
+              "color": "black",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontSize": 16,
+              "justifyContent": "center",
+              "wordWrap": "break-word",
+            }
+          }
+        >
+          Madrid
+          , 
+          Cundinamarca
+          , 
+          Colombia
+        </Text>
+        <mock-icon
+          color="black"
+          data-testid="material-icon-arrow-forward"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignContent": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "black",
+            "flexDirection": "row",
+            "height": 50,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "paddingTop": 15,
+            "verticalAlign": "center",
+          }
+        }
+        testID="pressable-arrow-forward"
+      >
+        <Text
+          style={
+            {
+              "alignItems": "center",
+              "color": "black",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontSize": 16,
+              "justifyContent": "center",
+              "wordWrap": "break-word",
+            }
+          }
+        >
+          Madridejos
+          , 
+          Castilla-La Mancha
+          , 
+          Spain
+        </Text>
+        <mock-icon
+          color="black"
+          data-testid="material-icon-arrow-forward"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignContent": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "black",
+            "flexDirection": "row",
+            "height": 50,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "paddingTop": 15,
+            "verticalAlign": "center",
+          }
+        }
+        testID="pressable-arrow-forward"
+      >
+        <Text
+          style={
+            {
+              "alignItems": "center",
+              "color": "black",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontSize": 16,
+              "justifyContent": "center",
+              "wordWrap": "break-word",
+            }
+          }
+        >
+          Madrid
+          , 
+          Colima
+          , 
+          Mexico
+        </Text>
+        <mock-icon
+          color="black"
+          data-testid="material-icon-arrow-forward"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignContent": "center",
+            "borderBottomWidth": 1,
+            "borderColor": "black",
+            "flexDirection": "row",
+            "height": 50,
+            "marginLeft": 15,
+            "marginRight": 15,
+            "paddingTop": 15,
+            "verticalAlign": "center",
+          }
+        }
+        testID="pressable-arrow-forward"
+      >
+        <Text
+          style={
+            {
+              "alignItems": "center",
+              "color": "black",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontSize": 16,
+              "justifyContent": "center",
+              "wordWrap": "break-word",
+            }
+          }
+        >
+          Madridejos
+          , 
+          Cebu
+          , 
+          Philippines
+        </Text>
+        <mock-icon
+          color="black"
+          data-testid="material-icon-arrow-forward"
+          size={24}
+        />
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

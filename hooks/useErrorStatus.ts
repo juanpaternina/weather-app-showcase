@@ -5,15 +5,16 @@ export const useErrorStatus = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const updateErrorState = useCallback(
-    (isError: boolean, errorMessage?: string) => {
+    (isError: boolean, lErrorMessage?: string) => {
       if (isError && errorMessage) {
         setErrorMessage(errorMessage);
         setError(isError);
         return;
       }
 
-      if (isError && !errorMessage) {
+      if (isError && !lErrorMessage) {
         setErrorMessage('Something went wrong');
+        return;
       }
 
       setError(isError);

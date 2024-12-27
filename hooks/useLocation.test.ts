@@ -6,7 +6,7 @@ import { updateUserLocation } from '@/state/slices/weather';
 import { useAppDispatch } from '@/state/hooks';
 
 // Mock Redux hooks and actions
-jest.mock('@/state/store', () => ({
+jest.mock('@/state/hooks', () => ({
   useAppDispatch: jest.fn(),
 }));
 jest.mock('@/state/slices/weather', () => ({
@@ -25,7 +25,7 @@ const mockUpdateUserLocation = updateUserLocation;
 describe('useLocation', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    (useAppDispatch as jest.Mock).mockReturnValue(mockDispatch);
+    (useAppDispatch as unknown as jest.Mock).mockReturnValue(mockDispatch);
   });
 
   test('dispatches location when permission is granted', async () => {

@@ -18,4 +18,15 @@ describe('useErrorStatus', () => {
 
     expect(result.current.error).toBeFalsy();
   });
+
+  test('Should test initial status, updateErrorState and return the right value', () => {
+    const { result } = renderHook(() => useErrorStatus());
+    expect(result.current.errorMessage).toBe('');
+    expect(result.current.error).toBeFalsy();
+
+    act(() => {
+      result.current.updateErrorState(true);
+    });
+    expect(result.current.errorMessage).toBe('Something went wrong');
+  });
 });
