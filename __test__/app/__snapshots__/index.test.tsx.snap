@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Should show an error message if there's an error 1`] = `
+<Text
+  style={
+    {
+      "color": "black",
+      "fontFamily": "medium",
+      "fontSize": 20,
+      "fontWeight": "bold",
+    }
+  }
+>
+  Error message
+</Text>
+`;
+
+exports[`App Component renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "white",
+      "flex": 1,
+      "padding": 0,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginTop": 4,
+      }
+    }
+  />
+</RCTSafeAreaView>
+`;

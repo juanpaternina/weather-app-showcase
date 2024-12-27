@@ -1,50 +1,87 @@
-# Welcome to your Expo app 👋
+# Weather app ☔️.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Demo](assets/demo.gif)
 
-## Get started
+This is app is a app showcase. We are going to use some stack technologies like.
 
-1. Install dependencies
+- React Native.
+- Expo 52.
+- Weather API
+- Redux Toolkit.
+- Typescript.
+- Jest and RNTL
 
-   ```bash
-   npm install
-   ```
+## 📚 Roadmap.
 
-2. Start the app
+- Set up expo project.
+- Set up Eslint, Prettier
+- Check the Rest API, understand how it works, and what parameters are requiered, to get the right information.
+- Create Interfaces and Types based on the API
+- Set up Redux and Redux persist.
+- Create list of test.
+- Create components matching the propossed test based on the requirements.
+- Connect with physical location
 
-   ```bash
-    npx expo start
-   ```
+## Installation
 
-In the output, you'll find options to open the app in a
+### Cloning and installing dependencies
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Clone the project from the url, enter to the project folder and install the dependencies.
 
 ```bash
-npm run reset-project
+  cd weather-app
+  yarn install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Getting the API KEY
 
-## Learn more
+After that create a file into the root project folder called .env. Inside add your API_KEY that you can get for free on https://www.weatherapi.com/.
 
-To learn more about developing your project with Expo, look at the following resources:
+The file should look like this.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+   EXPO_PUBLIC_API_KEY=c08ca7fa27ea453fb2c145802242312
+```
 
-## Join the community
+This is an example key. This one isn't working, you have to get your own.
 
-Join our community of developers creating universal apps.
+### Running the project.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Into the project folder, you can start the project running the command, or use the same commands to run an expo project.
+
+For iOS
+
+```bash
+    npm run ios
+```
+
+For Android
+
+```bash
+    npm run android
+```
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+To generate coverage
+
+```bash
+  npm run coverage
+```
+
+## Authors
+
+@juanpaternina
+
+- [Github Profile](https://www.github.com/juanpaternina)
+- [Linkedin Profile](https://www.linkedin.com/in/juanpaternina)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
